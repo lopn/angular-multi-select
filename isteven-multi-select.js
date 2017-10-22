@@ -668,7 +668,7 @@ angular.module( 'isteven-multi-select', ['ng'] ).directive( 'istevenMultiSelect'
 
                 // refresh button label...
                 if(typeof $scope.defaultLabel != 'undefined'){
-                    $scope.varButtonLabel = $scope.defaultLabel;
+                    $scope.varButtonLabel = $scope.defaultLabel.length?$scope.defaultLabel:"<span class='jzl-icon-list'></span>";
                 }else  if ( $scope.outputModel.length === 0 ) {
                     // https://github.com/isteven/angular-multi-select/pull/19
                     $scope.varButtonLabel = $scope.lang.nothingSelected;
